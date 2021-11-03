@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CSS GRID PRACTICE</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+			<a href="#" class="header__logo"></a>
+			<nav class="header__menu">
+				<ul class="header__list">
+					<li class="header__link">Пункт меню</li>
+					<li class="header__link">Пункт меню</li>
+					<li class="header__link">Пункт меню</li>
+					<li class="header__link">Пункт меню</li>
+				</ul>
+				<div class="header__burger"><span></span></div>
+			</nav>
+		</header>
+		<main class="main">
+			<aside class="sidebar">
+				<nav class="sidebar__menu">
+					<ul class="sidebar__list">
+						<li><a href="#" class="sidebar__link">Пункт меню</a></li>
+						<li><a href="#" class="sidebar__link">Пункт меню</a></li>
+						<li><a href="#" class="sidebar__link">Пункт меню</a></li>
+						<li><a href="#" class="sidebar__link">Пункт меню</a></li>
+						<li><a href="#" class="sidebar__link">Пункт меню</a></li>
+					</ul>
+				</nav>
+			</aside>
+			<section class="content">
+				<h1 class="content__title">Основные понятия Grid Layout</h1>
+				<p>CSS Grid это модель для создания шаблонов, оптимизированная для создания двумерных макетов. Она идеально подходит для: шаблонов сайтов, форм, галерей и всего, что требует точного и отзывчивого позиционирования.</p>
+				<p>Grid шаблон работает по системе сеток. Grid это набор пересекающихся горизонтальных и вертикальных линий, которые создают размерность и позиционируют систему координат для контента в самом grid-контейнере.</p>
+				<section class="content__gallery gallery">
+					<h2 class="gallery__title">Галерея</h2>
+					<div class="gallery__items">
+						<div class="gallery__item gallery__item_big">
+							<img src="img/grid/1.jpg" alt="grid img">
+						</div>
+						<div class="gallery__item">
+							<img src="img/grid/2.jpg" alt="grid img">
+						</div>
+						<div class="gallery__item">
+							<img src="img/grid/3.jpg" alt="grid img">
+						</div>
+						<div class="gallery__item">
+							<img src="img/grid/4.jpg" alt="grid img">
+						</div>
+						<div class="gallery__item">
+							<img src="img/grid/2.jpg" alt="grid img">
+						</div>
+						<div class="gallery__item">
+							<img src="img/grid/5.jpg" alt="grid img">
+						</div>
+						<div class="gallery__item">
+							<img src="img/grid/6.jpg" alt="grid img">
+						</div>
+						<div class="gallery__item gallery__item_big">
+							<img src="img/grid/5.jpg" alt="grid img">
+						</div>
+						<div class="gallery__item">
+							<img src="img/grid/6.jpg" alt="grid img">
+						</div>
+						<div class="gallery__item">
+							<img src="img/grid/4.jpg" alt="grid img">
+						</div>
+					</div>
+				</section>
+				<div class="content__products products">
+					<h2 class="content__title">Товары</h2>
+					<div class="products__items">
+						<div class="products__item">
+							<a href="#" class="products__image">
+								<img src="img/apple-epic.jpg" alt="">
+							</a>
+							<a href="#" class="products__name">Логотип Apple и Epic. Противостояние двух IT гигантов</a>
+							<a href="#" class="products__button">Купить</a>
+						</div>
+						<div class="products__item">
+							<a href="#" class="products__image">
+								<img src="img/apple-epic.jpg" alt="">
+							</a>
+							<a href="#" class="products__name">Логотип Apple и Epic. Противостояние двух IT гигантов</a>
+							<a href="#" class="products__button">Купить</a>
+						</div>
+						<div class="products__item">
+							<a href="#" class="products__image">
+								<img src="img/apple-epic.jpg" alt="">
+							</a>
+							<a href="#" class="products__name">Логотип Apple и Epic. Противостояние двух IT гигантов</a>
+							<a href="#" class="products__button">Купить</a>
+						</div>
+						<div class="products__item">
+							<a href="#" class="products__image">
+								<img src="img/apple-epic.jpg" alt="">
+							</a>
+							<a href="#" class="products__name">Логотип Apple и Epic. Противостояние двух IT гигантов</a>
+							<a href="#" class="products__button">Купить</a>
+						</div>
+						<div class="products__item">
+							<a href="#" class="products__image">
+								<img src="img/apple-epic.jpg" alt="">
+							</a>
+							<a href="#" class="products__name">Логотип Apple и Epic. Противостояние двух IT гигантов</a>
+							<a href="#" class="products__button">Купить</a>
+						</div>
+						<div class="products__item">
+							<a href="#" class="products__image">
+								<img src="img/apple-epic.jpg" alt="">
+							</a>
+							<a href="#" class="products__name">Логотип Apple и Epic. Противостояние двух IT гигантов</a>
+							<a href="#" class="products__button">Купить</a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__copy">Copy, 2020</div>
+			<div class="footer__text">Далеко-далеко за словесными горами в стране гласных и согласных, живут рыбные тексты.</div>
+		</footer>
+	</div>
+
+</body>
+
+</html>

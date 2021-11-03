@@ -1,0 +1,242 @@
+@import "../css/null.css";
+/*-------------------------*/
+* {
+	font-family: "Open Sans", sans-serif;
+	font-weight: 400;
+	font-size: 16px;
+}
+body {
+	background-color: #fff;
+}
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+}
+a {
+	color: inherit;
+}
+.wrapper {
+	min-height: 100%;
+	display: grid;
+	grid-template: minmax(100px, auto) 1fr minmax(70px, auto) / 1fr;
+	grid-template-areas:
+		"header"
+		"main"
+		"footer";
+}
+
+/*------- HEADER ----------------------*/
+
+.header {
+	grid-area: header;
+	padding: 15px;
+	background-color: rgb(201, 149, 87);
+	display: grid;
+	align-items: center;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+}
+.header__logo {
+	height: 70px;
+	width: 70px;
+	border-radius: 50%;
+	background-color: #fff;
+	grid-column: 2 / 3;
+}
+.header__menu {
+	color: #fff;
+	font-size: 18px;
+	grid-column: 3 / 4;
+}
+.header__list {
+	display: grid;
+	grid-auto-flow: column;
+	justify-items: end;
+}
+
+/*------- MAIN ----------------------*/
+
+.main {
+	grid-area: main;
+	display: grid;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+	background-color: rgb(69 69 69);
+	color: #fff;
+}
+.sidebar {
+	grid-column: 2 / 3;
+	padding: 30px 15px;
+	background-color: rgb(241, 135, 135);
+}
+.sidebar__link {
+	color: #fff;
+}
+.content {
+	padding: 20px 0 0 0;
+}
+.content p{
+	font-size: 18px;
+	padding: 0 0 10px 0;
+}
+.sidebar {
+	padding: 0 10px 0 10px;
+}
+.sidebar__list li {
+	padding: 10px;
+}
+@media screen and (min-width: 992px) {
+	.main {
+		grid-area: main;
+		display: grid;
+		padding: 30px 15px;
+		grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+	}
+	.sidebar__list li {
+		margin: 0 0 15px 0;
+	}
+	.content {
+		padding: 0 0 0 30px;
+	}
+}
+.content {
+	grid-column: 3 / 4;
+}
+.content__title {
+	text-transform: capitalize;
+	font-size: 62px;
+	font-weight: 700;
+	padding: 0 0 40px 0;
+}
+.content__gallery {
+	padding: 0 0 30px 0;
+}
+.gallery__title {
+	text-transform: capitalize;
+	font-size: 42px;
+	font-weight: 700;
+	padding: 0 0 20px 0;
+}
+.gallery__items {
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.gallery__item {
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	padding: 0 0 85% 0;
+}
+.gallery__item img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.products__items {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	column-gap: 30px;
+	row-gap: 50px;
+}
+.products__item {
+	display: grid;
+	grid-auto-flow: row;
+	grid-template: auto 1fr minmax(40px, auto) / 1fr;
+}
+.products__image {
+	border-radius: 10px;
+	overflow: hidden;
+	position: relative;
+	padding: 0 0 90% 0;
+	margin: 0 0 20px 0;
+}
+.products__image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+.products__name {
+	font-size: 22px;
+	color: #fff;
+	line-height: 28px;
+	margin: 0 0 20px 0;
+}
+.products__button {
+	border-radius: 7px;
+	/*overflow: hidden;*/
+	color: #fff;
+	background-color: rgb(241, 135, 135);
+	justify-self: start;
+	font-weight: 700;
+	text-align: center;
+	padding: 10px 20px;
+}
+
+@media screen and (min-width: 550px) {
+	.gallery__item_big {
+		grid-column: span 2;
+		grid-row: span 2;
+	}
+	.products__items {
+		grid-auto-rows: 1fr;
+	}
+}
+@media screen and (max-width: 991px) {
+	.main {
+		display: block;
+		padding: 20px 10px;
+	}
+}
+@media screen and (max-width: 768px) {
+	.products__name {
+		font-size: 18px;
+	}
+	.header__link {
+		margin: 0 10px;
+	}
+	.content__title {
+		font-size: 52px;
+		padding: 0 0 25px 0;
+	}
+	.gallery__title {
+		font-size: 32px;
+	}
+}
+
+/*------- FOOTER ----------------------*/
+
+.footer {
+	grid-area: footer;
+	background-color: #48c198;
+	display: grid;
+	align-items: center;
+	grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+	padding: 15px;
+}
+.footer__copy {
+	grid-column: 2 / 3;
+}
+.footer__text {
+	grid-column: 3 / 4;
+	text-align: right;
+	/*justify-content: end;*/
+}
+@media screen and (max-width:495px) {
+	.footer__copy {
+		text-align: center;
+	}
+	.footer__text {
+		text-align: center;
+	}
+	.sidebar {
+		display: none;
+	}
+	.content{
+		padding: 0;
+	}
+}
